@@ -2,60 +2,78 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Login</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="/sbadmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="/sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 </head>
-<style>
-  .gradient-custom {
-    /* fallback for old browsers */
-    background: #6a11cb;
+<body class="bg-gradient-primary">
+    <div class="container">
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                                <br/>
+                                <img src="/sbadmin/React.png" width="70%">
+                            </div>
 
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">LOGIN INVENTARIS</h1>
+                                    </div>
 
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
-  }
-</style>
+                                    {{-- form login --}}
+                                    <form class="user" action="/login" method="POST">                                        
+                                        @csrf
 
-<body>
-  <section class="text-center">
-    <div class="p-5 bg-image" style="
-        background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
-        height: 300px;
-        "></div>
-    <div class="card mx-4 mx-md-5 shadow-5-strong bg-body-tertiary" style="
-        margin-top: -100px;
-        backdrop-filter: blur(30px);
-        ">
-      <div class="card-body py-5 px-md-5">
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-6">
-            <h2 class="fw-bold mb-5">Login</h2>
-            <form>
-              <div data-mdb-input-init class="form-outline mb-4">
-                <label class="form-label" for="form3Example3">Email address</label>
-                <input type="email" id="form3Example3" class="form-control" placeholder="Enter your email" />
-              </div>
-              <div data-mdb-input-init class="form-outline mb-4">
-                <label class="form-label" for="form3Example4">Password</label>
-                <input type="password" id="form3Example4" class="form-control" placeholder="Enter your password" />
-              </div>
-              <div class="d-flex justify-content-start mb-4">
-                <a href="#">Forgot password?</a>
-              </div>
-              <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
-                Login
-              </button>
-            </form>
-          </div>
+                                        <div class="form-group">
+                                            <input type="text" name="username" class="form-control form-control-user">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="password" class="form-control form-control-user">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                            Login
+                                        </button>
+                                    </form>
+                                    {{-- --------------------------- --}}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/sbadmin/vendor/jquery/jquery.min.js"></script>
+    <script src="/sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/sbadmin/js/sb-admin-2.min.js"></script>
 
 </body>
 
